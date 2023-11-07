@@ -1,0 +1,38 @@
+%%writefile ques4i.cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  double temperature, typicalVal, temp1;
+  double temp2, temp3, temp4;
+  double height1, height2, height3, height4, height5;    //temp in degree celcius, height in m
+
+  temperature = 15;
+  typicalVal = 0.005;
+  cout << "The temperature at sea level in Fahrenheit: " << temp1 << "°C" << endl;
+
+  height1 = 1000;
+  temp1 = temperature - typicalVal*height1;
+  cout << "The temperature at " << height1 << "m:" << temp1 << "°C" << endl;
+
+  height2 = 2000;
+  temp2 = temperature - typicalVal*height2;
+  cout << "The temperature at " << height2 << "m:" << temp2 << "°C" << endl;
+
+  height3 = 3000;
+  temp3 = temperature - typicalVal*height3;
+  cout << "The temperature at " << height3 << "m:" << temp3 << "°C" << endl;
+
+  height4 = 8.848;
+  temp4 = temperature - typicalVal*height4;
+  cout << "The temperature at the top of Mount Everest:  " << temp4 << "°C" << endl;
+
+  height5 = temperature / typicalVal;
+  cout << "The height at which the temperature is 0°C: " << height5 << "m\n";
+
+  //temperature in °C, height in m
+  temperature = temperature*1.8 + 32;
+  cout << "\nThe temperature at sea level in Farenheit: " << temperature << "F" << endl;
+  return 0;
+}
