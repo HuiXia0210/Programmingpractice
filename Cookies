@@ -1,0 +1,29 @@
+%%writefile ques1.cpp
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    // Constants
+    const int COOKIES_PER_BAG = 30;
+    const int NUM_SERVINGS = 10;
+    const int CALORIES_PER_SERVING = 300;
+
+    int numCookies;
+    int cookiesPerServing;
+    int caloriesPerCookie;
+    int totalCalories;
+
+    cout << "How many cookies did you eat? ";
+    cin >> numCookies;
+
+    cookiesPerServing = COOKIES_PER_BAG / NUM_SERVINGS;
+
+    caloriesPerCookie = CALORIES_PER_SERVING / cookiesPerServing;
+
+    totalCalories = caloriesPerCookie * numCookies ;
+
+    cout << "You have consumed " << totalCalories << " calories.\n";
+    return 0;
+}
