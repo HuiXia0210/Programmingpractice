@@ -1,0 +1,17 @@
+%%writefile ques3.cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+  long icnum;
+
+  cout << "Please enter your IC number: ";
+  cin >> icnum;
+
+  int age = (icnum /10e9) + 23;
+  cout << "Your age is:" << age << endl;
+  return 0;
+
+}
